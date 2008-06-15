@@ -1,0 +1,17 @@
+This is the debian package for the ExtUtils::ParseXS module.
+
+Chip Salzenberg <chip@debian.org> created this Debian package using
+original sources found on the Comprehensive Perl Archive Network
+(CPAN) <URL:http://cpan.org/>.  The Debian Perl packaging tool
+"dh-make-perl" was of great help.
+
+It's now maintained by Florian Ragwitz <rafl@debian.org>
+
+Original code for ExtUtils::xsubpp script was written by Larry Wall.
+Adapted into ExtUtils::ParseXS module by Ken Williams, <ken@mathforum.org>.
+
+This package may be redistributed under the terms of either the GNU
+General Public License or the Artistic License.  On a Debian GNU/Linux
+systems, the complete text of these licenses may be found in the files
+/usr/share/common-licenses/{GPL,Artistic}.
+

@@ -1,0 +1,80 @@
+libextutils-parsexs-perl (2.15-2) unstable; urgency=low
+
+  * Use Makefile.PL instead of Build.PL.
+  * Remove libmodule-build-perl dependency (Closes: #385354).
+  * Bump-up Standards-Version to 3.7.2 (no changes).
+  * Use DH_COMPAT 5.
+
+ -- Florian Ragwitz <rafl@debian.org>  Sat,  2 Sep 2006 15:21:03 +0200
+
+libextutils-parsexs-perl (2.15-1) unstable; urgency=low
+
+  * New upstream release (Closes: #329536).
+  * New Maintainer with the acknowledgement from the former one.
+  * Cleaned up debian/rules.
+  * Bumped up Standards-Version.
+
+ -- Florian Ragwitz <rafl@debian.org>  Fri, 27 Jan 2006 03:23:19 +0100
+
+libextutils-parsexs-perl (2.09-2) unstable; urgency=low
+
+  * Change to "Architecture: all".  (dh-make-perl was fooled by an xs file
+    that's used only for testing.)
+
+ -- Chip Salzenberg <chip@debian.org>  Thu,  7 Apr 2005 19:19:12 -0400
+
+libextutils-parsexs-perl (2.09-1) unstable; urgency=low
+
+  * New upstream release.
+    > Apparently fixes FTBTS on amd64.  (closes: #277591)
+
+ -- Chip Salzenberg <chip@debian.org>  Tue,  5 Apr 2005 08:25:04 -0400
+
+libextutils-parsexs-perl (2.05-2) unstable; urgency=high
+
+  * Fix Build-Depends by deleting my hacked dpkg-source.
+
+ -- Chip Salzenberg <chip@debian.org>  Sun,  5 Oct 2003 21:42:32 -0400
+
+libextutils-parsexs-perl (2.05-1) unstable; urgency=low
+
+  * New upstream release.
+  * Expand package description.  (closes: #209710)
+
+ -- Chip Salzenberg <chip@debian.org>  Fri,  3 Oct 2003 19:11:49 -0400
+
+libextutils-parsexs-perl (2.02-3) unstable; urgency=medium
+
+  * Link test program with $Config{perllibs} instead of $Config{libs},
+    so build no longer needs libdb-dev and libgdbm-dev.  Adjust control
+    accordingly.
+  
+ -- Chip Salzenberg <chip@debian.org>  Sun, 27 Jul 2003 11:27:52 -0400
+
+libextutils-parsexs-perl (2.02-2) unstable; urgency=low
+
+  * Changed section from interpreters to perl.
+  * Changed Build-Depends to be Build-Depends-Indep, fixes lintian warning.
+  * Changed perl depends from hard number to ${perl:Depends}.
+  * Expanded Description field from upstream docs.
+  * Upped Standards-Version to 3.6.0.
+  * Use debhelper v4 (Depends in control, DH_COMPAT in rules).
+  * Remove unused directories from package.
+  * Use module test when building (requires libgdbm-dev as build dep).
+  (All above from Jay Bonci <jay@bonci.com>, thanks much)
+  * Install xsubpp substitute in examples, not where the libs are.
+
+ -- Chip Salzenberg <chip@debian.org>  Fri, 25 Jul 2003 14:54:19 -0400
+
+libextutils-parsexs-perl (2.02-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Chip Salzenberg <chip@debian.org>  Thu, 24 Jul 2003 17:58:06 -0400
+
+libextutils-parsexs-perl (1.99-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Chip Salzenberg <chip@debian.org>  Sat, 15 Feb 2003 16:06:56 -0500
+
