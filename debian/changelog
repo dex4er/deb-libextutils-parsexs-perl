@@ -12,7 +12,7 @@ libextutils-parsexs-perl (2.19-1) unstable; urgency=low
   * Add debian/watch.
 
   [ AGOSTINI Yves ]
-  * upgrade to new upstream 2.19 (Closes: #485441) (Closes: #485419)
+  * upgrade to new upstream 2.19 (Closes: #485441, #485419)
   * add me to uploaders
   * Standards-Version: 3.8.0 (no changes)
   * refresh rules with architecture independent rules
