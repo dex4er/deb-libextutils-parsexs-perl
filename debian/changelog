@@ -1,4 +1,4 @@
-libextutils-parsexs-perl (2.19-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.19-1) unstable; urgency=low
 
   [ gregor herrmann ]
   * Take over for the Debian Perl Group with maintainer's permission
