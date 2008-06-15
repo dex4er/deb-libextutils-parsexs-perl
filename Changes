@@ -1,5 +1,39 @@
 Revision history for Perl extension ExtUtils::ParseXS.
 
+ - Fixed the treatment of the OVERLOAD: keyword, which was causing a C
+   compile error. [Toshiyuki Yamato]
+
+2.18 - Mon Jan 29 20:56:36 2007
+
+ - Added some UNITCHECK stuff, which (I think) makes XS code able to
+   do UNITCHECK blocks. [Nicholas Clark]
+
+ - Changed 'use re "eval";' to 'BEGIN { $^H |= 0x00200000 };' so we
+   can compile re.xs in bleadperl. [Yves Orton]
+
+ - Fix an undefined-variable warning related to 'inout' parameter
+   processing.
+
+2.17 - Mon Nov 20 17:07:27 2006
+
+ - Stacked $filepathname to make #line directives in #INCLUDEs work.
+   [Nicholas Clark]
+
+ - Sprinked dVAR in with dXSARGS, for God-(Jarkko)-knows-what
+   reason. [Jarkko Hietaniemi]
+
+ - Use printf-style formats in Perl_croak() for some significant
+   savings in number of distinct constant strings in the linked
+   binaries we create. [Alexey Tourbin]
+
+ - Don't use 'class' as a variable name in the t/XSTest.xs module,
+   since that's a keyword in C++. [Jarkko Hietaniemi]
+
+2.16  Fri Sep 15 22:33:24 CDT 2006
+
+ - Fix a problem with PREFIX not working inside INTERFACE
+   sections. [Salvador Fandin~o]
+
 2.15  Mon Oct 10 11:02:13 EDT 2005
 
  - I accidentally left out a README from the distribution.  Now it's

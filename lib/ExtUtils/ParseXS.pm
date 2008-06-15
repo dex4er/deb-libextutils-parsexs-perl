@@ -18,7 +18,7 @@ my(@XSStack);	# Stack of conditionals and INCLUDEs
 my($XSS_work_idx, $cpp_next_tmp);
 
 use vars qw($VERSION);
-$VERSION = '2.15';
+$VERSION = '2.19';
 
 use vars qw(%input_expr %output_expr $ProtoUsed @InitFileCode $FH $proto_re $Overload $errors $Fallback
 	    $cplusplus $hiertype $WantPrototypes $WantVersionChk $except $WantLineNumbers
@@ -76,7 +76,7 @@ sub process_file {
   $proto_re = "[" . quotemeta('\$%&*@;[]') . "]" ;
   $Overload = 0;
   $errors = 0;
-  $Fallback = 'PL_sv_undef';
+  $Fallback = '&PL_sv_undef';
 
   # Most of the 1500 lines below uses these globals.  We'll have to
   # clean this up sometime, probably.  For now, we just pull them out
@@ -203,7 +203,7 @@ sub process_file {
   $size = qr[,\s* (??{ $bal }) ]x; # Third arg (to setpvn)
 
   foreach my $key (keys %output_expr) {
-    use re 'eval';
+    BEGIN { $^H |= 0x00200000 }; # Equivalent to: use re 'eval', but hardcoded so we can compile re.xs
 
     my ($t, $with_size, $arg, $sarg) =
       ($output_expr{$key} =~
@@ -456,7 +456,7 @@ EOF
 					     \b ( \w+ | length\( \s*\w+\s* \) )
 					     \s* $ /x);
 	  next unless defined($pre) && length($pre);
-	  my $out_type;
+	  my $out_type = '';
 	  my $inout_var;
 	  if ($process_inout and s/^(IN|IN_OUTLIST|OUTLIST|OUT|IN_OUT)\s+//) {
 	    my $type = $1;
@@ -565,7 +565,11 @@ EOF
 #XS(XS_${Full_func_name}); /* prototype to pass -Wmissing-prototypes */
 #XS(XS_${Full_func_name})
 #[[
+##ifdef dVAR
+#    dVAR; dXSARGS;
+##else
 #    dXSARGS;
+##endif
 EOF
     print Q(<<"EOF") if $ALIAS ;
 #    dXSI32;
@@ -589,12 +593,12 @@ EOF
     if ($ALIAS)
       { print Q(<<"EOF") if $cond }
 #    if ($cond)
-#       Perl_croak(aTHX_ "Usage: %s($report_args)", GvNAME(CvGV(cv)));
+#       Perl_croak(aTHX_ "Usage: %s(%s)", GvNAME(CvGV(cv)), "$report_args");
 EOF
     else
       { print Q(<<"EOF") if $cond }
 #    if ($cond)
-#	Perl_croak(aTHX_ "Usage: $pname($report_args)");
+#       Perl_croak(aTHX_ "Usage: %s(%s)", "$pname", "$report_args");
 EOF
     
      # cv doesn't seem to be used, in most cases unless we go in 
@@ -892,6 +896,7 @@ EOF
 #XS(XS_${Packid}_nil); /* prototype to pass -Wmissing-prototypes */
 #XS(XS_${Packid}_nil)
 #{
+#   dXSARGS;
 #   XSRETURN_EMPTY;
 #}
 #
@@ -919,7 +924,11 @@ EOF
 
   print Q(<<"EOF");
 #[[
+##ifdef dVAR
+#    dVAR; dXSARGS;
+##else
 #    dXSARGS;
+##endif
 EOF
 
   #-Wall: if there is no $Full_func_name there are no xsubs in this .xs
@@ -970,6 +979,13 @@ EOF
     @line = @BootCode;
     print_section();
     print "\n    /* End of Initialisation Section */\n\n" ;
+  }
+
+  if ($] >= 5.009) {
+    print <<'EOF';
+    if (PL_unitcheckav)
+         call_list(PL_scopestack_ix, PL_unitcheckav);
+EOF
   }
 
   print Q(<<"EOF");
@@ -1213,7 +1229,9 @@ sub INTERFACE_handler() {
   TrimWhitespace($in);
 
   foreach (split /[\s,]+/, $in) {
-    $Interfaces{$_} = $_;
+    my $name = $_;
+    $name =~ s/^$Prefix//;
+    $Interfaces{$name} = $_;
   }
   print Q(<<"EOF");
 #	XSFUNCTION = $interface_macro($ret_type,cv,XSANY.any_dptr);
@@ -1301,9 +1319,9 @@ sub FALLBACK_handler()
   
   TrimWhitespace($_) ;
   my %map = (
-	     TRUE => "PL_sv_yes", 1 => "PL_sv_yes",
-	     FALSE => "PL_sv_no", 0 => "PL_sv_no",
-	     UNDEF => "PL_sv_undef",
+	     TRUE => "&PL_sv_yes", 1 => "&PL_sv_yes",
+	     FALSE => "&PL_sv_no", 0 => "&PL_sv_no",
+	     UNDEF => "&PL_sv_undef",
 	    ) ;
   
   # check for valid FALLBACK value
@@ -1438,6 +1456,7 @@ sub INCLUDE_handler ()
 		    Line            => \@line,
 		    LineNo          => \@line_no,
 		    Filename        => $filename,
+		    Filepathname    => $filepathname,
 		    Handle          => $FH,
 		   }) ;
 
@@ -1452,7 +1471,7 @@ sub INCLUDE_handler ()
 #
 EOF
 
-    $filename = $_ ;
+    $filepathname = $filename = $_ ;
 
     # Prime the pump by reading the first
     # non-blank line
@@ -1481,7 +1500,11 @@ sub PopFile()
     close $FH ;
 
     $FH         = $data->{Handle} ;
+    # $filename is the leafname, which for some reason isused for diagnostic
+    # messages, whereas $filepathname is the full pathname, and is used for
+    # #line directives.
     $filename   = $data->{Filename} ;
+    $filepathname = $data->{Filepathname} ;
     $lastline   = $data->{LastLine} ;
     $lastline_no = $data->{LastLineNo} ;
     @line       = @{ $data->{Line} } ;

@@ -1,17 +1,26 @@
-This is the debian package for the ExtUtils::ParseXS module.
+Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=102
+Debianized-By: AGOSTINI Yves <agostini@univ-metz.fr>
+Debianized-Date: Sun, 15 Jun 2008 21:41:06 +0200
+Original-Source-Location: http://search.cpan.org/dist/ExtUtils-ParseXS/
+Upstream-Author: Ken Williams, <ken@mathforum.org>
 
-Chip Salzenberg <chip@debian.org> created this Debian package using
-original sources found on the Comprehensive Perl Archive Network
-(CPAN) <URL:http://cpan.org/>.  The Debian Perl packaging tool
-"dh-make-perl" was of great help.
+Files: *
+Copyright: Copyright 2002-2003 Ken Williams. All rights reserved. 
+License: GPL-1+ | Artistic
+ This library is free software; you can redistribute it and/or modify it under
+ the same terms as Perl itself.
+ .
+ Based on the ExtUtils::xsubpp code by Larry Wall and the Perl 5 Porters, which
+ was released under the same license terms.
 
-It's now maintained by Florian Ragwitz <rafl@debian.org>
+Files: debian/*
+Copyright: Copyright 2003 - 2006 Chip Salzenberg <chip@debian.org>,
+ Copyright 2006 -2008  Florian Ragwitz <rafl@debian.org>,
+ Copyright 2008 Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+License: GPL-1+ | Artistic
+ The Debian packaging is put under the same terms as the module itself.
 
-Original code for ExtUtils::xsubpp script was written by Larry Wall.
-Adapted into ExtUtils::ParseXS module by Ken Williams, <ken@mathforum.org>.
-
-This package may be redistributed under the terms of either the GNU
-General Public License or the Artistic License.  On a Debian GNU/Linux
-systems, the complete text of these licenses may be found in the files
-/usr/share/common-licenses/{GPL,Artistic}.
-
+Perl is distributed under your choice of the GNU General Public License or
+the Artistic License.  On Debian GNU/Linux systems, the complete text of the
+GNU General Public License can be found in `/usr/share/common-licenses/GPL'
+and the Artistic Licence in `/usr/share/common-licenses/Artistic'.

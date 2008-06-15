@@ -1,5 +1,6 @@
-libextutils-parsexs-perl (2.15-3) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.19-1) UNRELEASED; urgency=low
 
+  [ gregor herrmann ]
   * Take over for the Debian Perl Group with maintainer's permission
     (http://lists.debian.org/debian-perl/2008/06/msg00039.html)
   * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
@@ -10,7 +11,15 @@ libextutils-parsexs-perl (2.15-3) UNRELEASED; urgency=low
     Uploaders.
   * Add debian/watch.
 
- -- gregor herrmann <gregoa@debian.org>  Sun, 15 Jun 2008 15:48:34 +0200
+  [ AGOSTINI Yves ]
+  * upgrade to new upstream 2.19 (Closes: #485441) (Closes: #485419)
+  * add me to uploaders
+  * Standards-Version: 3.8.0 (no changes)
+  * refresh rules with architecture independent rules
+  * debian/control: add libmodule-build-perl in Build-Depends
+  * debian/copyright: Proposals/CopyrightFormat rev=102, add Perl Group
+
+ -- AGOSTINI Yves <agostini@univ-metz.fr>  Sun, 15 Jun 2008 21:05:53 +0200
 
 libextutils-parsexs-perl (2.15-2) unstable; urgency=low
 
