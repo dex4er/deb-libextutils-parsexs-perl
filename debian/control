@@ -9,7 +9,7 @@ Uploaders: Florian Ragwitz <rafl@debian.org>,
 Standards-Version: 3.8.0
 Homepage: http://search.cpan.org/dist/ExtUtils-ParseXS/
 Vcs-Svn: svn://svn.debian.org/pkg-perl/trunk/libextutils-parsexs-perl/
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-perl/trunk/libextutils-parsexs-perl/
+Vcs-Browser: http://svn.debian.org/viewsvn/pkg-perl/trunk/libextutils-parsexs-perl/
 
 Package: libextutils-parsexs-perl
 Architecture: all
