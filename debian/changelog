@@ -2,6 +2,7 @@ libextutils-parsexs-perl (2.19-2) UNRELEASED; urgency=low
 
   * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
     (source stanza).
+  * Remove Florian Ragwitz from Uploaders (closes: #523285).
 
  -- gregor herrmann <gregoa@debian.org>  Sun, 16 Nov 2008 20:42:35 +0100
 
