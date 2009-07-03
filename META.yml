@@ -1,25 +1,28 @@
 ---
 name: ExtUtils-ParseXS
-version: 2.19
+version: 2.20
 author:
   - 'Maintained by Ken Williams, <ken@mathforum.org>'
 abstract: converts Perl XS code into C code
 license: perl
 resources:
   license: http://dev.perl.org/licenses/
+build_requires:
+  Carp: 0
+  DynaLoader: 0
+  ExtUtils::CBuilder: 0
+  Test::More: 0.47
 requires:
-  Config: 0
   Cwd: 0
   Exporter: 0
   File::Basename: 0
   File::Spec: 0
-build_requires:
-  ExtUtils::CBuilder: 0
+  Symbol: 0
 provides:
   ExtUtils::ParseXS:
     file: lib/ExtUtils/ParseXS.pm
-    version: 2.19
-generated_by: Module::Build version 0.2808
+    version: 2.20
+generated_by: Module::Build version 0.3305
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
