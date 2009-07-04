@@ -1,4 +1,12 @@
-libextutils-parsexs-perl (2.19-2) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.20-1) UNRELEASED; urgency=low
+
+  * New upstream release
+    + Various bug fixes
+    + Added test for using an XS library
+    + Now depends on Test::More 0.47, oldstable has 0.62
+  * Standards-Version 3.8.2
+  * Added /me to Uploaders and Copyright
+  * Updated copyright statements
 
   [ gregor herrmann ]
   * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
@@ -8,7 +16,7 @@ libextutils-parsexs-perl (2.19-2) UNRELEASED; urgency=low
   [ Nathan Handler ]
   * debian/watch: Update to ignore development releases.
 
- -- gregor herrmann <gregoa@debian.org>  Sun, 16 Nov 2008 20:42:35 +0100
+ -- Jonathan Yu <frequency@cpan.org>  Fri, 03 Jul 2009 15:56:23 -0400
 
 libextutils-parsexs-perl (2.19-1) unstable; urgency=low
 

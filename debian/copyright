@@ -1,11 +1,12 @@
-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=102
-Debianized-By: AGOSTINI Yves <agostini@univ-metz.fr>
-Debianized-Date: Sun, 15 Jun 2008 21:41:06 +0200
-Original-Source-Location: http://search.cpan.org/dist/ExtUtils-ParseXS/
-Upstream-Author: Ken Williams, <ken@mathforum.org>
+Format-Specification:
+    http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=196
+Upstream-Maintainer: David Golden <dagolden@cpan.org>
+Upstream-Source: http://search.cpan.org/dist/ExtUtils-ParseXS/
+Upstream-Name: ExtUtils-ParseXS
 
 Files: *
 Copyright: Copyright 2002-2003 Ken Williams. All rights reserved. 
+License-Alias: Perl
 License: GPL-1+ | Artistic
  This library is free software; you can redistribute it and/or modify it under
  the same terms as Perl itself.
@@ -14,13 +15,24 @@ License: GPL-1+ | Artistic
  was released under the same license terms.
 
 Files: debian/*
-Copyright: Copyright 2003 - 2006 Chip Salzenberg <chip@debian.org>,
- Copyright 2006 -2008  Florian Ragwitz <rafl@debian.org>,
- Copyright 2008 Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Copyright: 2009, Jonathan Yu <frequency@cpan.org>
+ 2008, Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+ 2006-2008, Florian Ragwitz <rafl@debian.org>
+ 2003-2006, Chip Salzenberg <chip@debian.org>
 License: GPL-1+ | Artistic
  The Debian packaging is put under the same terms as the module itself.
 
-Perl is distributed under your choice of the GNU General Public License or
-the Artistic License.  On Debian GNU/Linux systems, the complete text of the
-GNU General Public License can be found in `/usr/share/common-licenses/GPL'
-and the Artistic Licence in `/usr/share/common-licenses/Artistic'.
+License: Artistic
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the Artistic License, which comes with Perl.
+    On Debian GNU/Linux systems, the complete text of the Artistic License
+    can be found in `/usr/share/common-licenses/Artistic'
+
+License: GPL-1+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 1, or (at your option)
+    any later version.
+    On Debian GNU/Linux systems, the complete text of the GNU General
+    Public License can be found in `/usr/share/common-licenses/GPL'
+
