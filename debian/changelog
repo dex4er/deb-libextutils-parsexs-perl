@@ -7,6 +7,9 @@ libextutils-parsexs-perl (2.20-1) UNRELEASED; urgency=low
   * Standards-Version 3.8.2
   * Added /me to Uploaders and Copyright
   * Updated copyright statements
+  * No longer needs Module::Build, Makefile.PL is traditional
+  * Rewrote control description
+  * Bumped debhelper dependency to 7; use the short rules style
 
   [ gregor herrmann ]
   * debian/control: Changed: Switched Vcs-Browser field to ViewSVN

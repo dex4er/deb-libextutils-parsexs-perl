@@ -1,7 +1,7 @@
 Source: libextutils-parsexs-perl
 Section: perl
 Priority: optional
-Build-Depends: debhelper (>= 5.0.0), libmodule-build-perl
+Build-Depends: debhelper (>= 7)
 Build-Depends-Indep: perl (>= 5.8.0-7), libextutils-cbuilder-perl
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
 Uploaders: AGOSTINI Yves <agostini@univ-metz.fr>,
@@ -14,12 +14,9 @@ Vcs-Browser: http://svn.debian.org/viewsvn/pkg-perl/trunk/libextutils-parsexs-pe
 Package: libextutils-parsexs-perl
 Architecture: all
 Depends: ${perl:Depends}, ${misc:Depends}, libextutils-cbuilder-perl
-Description: convert Perl XS code into C code
- ExtUtils::ParseXS will compile XS code into C code by embedding the
- constructs necessary to let C functions manipulate Perl values, and
- creates the glue necessary to let Perl access those functions.
- .
- This is all the same functionality as the "xsubpp" program included
- with perl -- and in fact there's an "xsubpp" replacement script
- included in this package -- but this package's modular interface may
- be more convenient for some purposes.
+Description: Perl utility to process Perl XS code into C code
+ ExtUtils::ParseXS provides a modular way of compiling Perl XS code into the
+ appropriate C code by embedding the constructs necessary to let C functions
+ manipulate Perl values and creating the glue necessary to let Perl access
+ those functions. It is functionally similar to the "xsubpp" program included
+ with perl and in fact provides a drop-in replacement for it.
