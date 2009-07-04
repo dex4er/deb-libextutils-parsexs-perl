@@ -19,6 +19,9 @@ libextutils-parsexs-perl (2.20-1) unstable; urgency=low
   [ Nathan Handler ]
   * debian/watch: Update to ignore development releases.
 
+  [ gregor herrmann ]
+  * debian/copyright: list contributors instead of group for debian/*.
+
  -- Jonathan Yu <frequency@cpan.org>  Fri, 03 Jul 2009 16:18:13 -0400
 
 libextutils-parsexs-perl (2.19-1) unstable; urgency=low
