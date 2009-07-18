@@ -1,3 +1,11 @@
+libextutils-parsexs-perl (2.2002-1) UNRELEASED; urgency=low
+
+  * New upstream release
+    + Fix INSTALLDIRS setting for older Perls (RT#47895)
+    + Fix XSUsage prototypes -- xsusage_{five,six} take an int parameter
+
+ -- Jonathan Yu <frequency@cpan.org>  Sat, 18 Jul 2009 14:05:32 -0400
+
 libextutils-parsexs-perl (2.20-1) unstable; urgency=low
 
   * New upstream release
