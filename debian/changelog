@@ -1,11 +1,16 @@
 libextutils-parsexs-perl (2.2002-1) UNRELEASED; urgency=low
 
+  [ Jonathan Yu ]
   No release necessary
   IGNORE-VERSION: 2.2002-1
 
   * New upstream release
     + Fix INSTALLDIRS setting for older Perls (RT#47895)
     + Fix XSUsage prototypes -- xsusage_{five,six} take an int parameter
+
+  [ Damyan Ivanov ]
+  * add uversionmangle to force four digits after the dot
+    Closes: #542019 -- version numbering
 
  -- Jonathan Yu <frequency@cpan.org>  Sat, 18 Jul 2009 14:05:32 -0400
 
