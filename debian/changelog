@@ -7,6 +7,9 @@ libextutils-parsexs-perl (2.2002-1) UNRELEASED; urgency=low
   [ Damyan Ivanov ]
   * add uversionmangle to force four digits after the dot
     Closes: #542019 -- version numbering
+  * Standards-Version: 3.8.3
+    - drop the version from the perl build-dependency (already covered by
+      oldstable)
 
  -- Jonathan Yu <frequency@cpan.org>  Sat, 18 Jul 2009 14:05:32 -0400
 

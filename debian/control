@@ -2,11 +2,11 @@ Source: libextutils-parsexs-perl
 Section: perl
 Priority: optional
 Build-Depends: debhelper (>= 7)
-Build-Depends-Indep: perl (>= 5.8.0-7), libextutils-cbuilder-perl
+Build-Depends-Indep: perl, libextutils-cbuilder-perl
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
 Uploaders: AGOSTINI Yves <agostini@univ-metz.fr>,
  Jonathan Yu <frequency@cpan.org>
-Standards-Version: 3.8.2
+Standards-Version: 3.8.3
 Homepage: http://search.cpan.org/dist/ExtUtils-ParseXS/
 Vcs-Svn: svn://svn.debian.org/pkg-perl/trunk/libextutils-parsexs-perl/
 Vcs-Browser: http://svn.debian.org/viewsvn/pkg-perl/trunk/libextutils-parsexs-perl/
