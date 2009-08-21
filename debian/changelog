@@ -1,4 +1,4 @@
-libextutils-parsexs-perl (2.2002-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.2002-1) unstable; urgency=low
 
   [ Jonathan Yu ]
   * New upstream release
@@ -12,7 +12,7 @@ libextutils-parsexs-perl (2.2002-1) UNRELEASED; urgency=low
       oldstable)
   * add myself to Uploaders
 
- -- Jonathan Yu <frequency@cpan.org>  Sat, 18 Jul 2009 14:05:32 -0400
+ -- Damyan Ivanov <dmn@debian.org>  Fri, 21 Aug 2009 10:42:21 +0300
 
 libextutils-parsexs-perl (2.20-1) unstable; urgency=low
 
