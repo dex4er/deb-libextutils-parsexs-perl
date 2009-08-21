@@ -1,11 +1,7 @@
 libextutils-parsexs-perl (2.2002-1) UNRELEASED; urgency=low
 
   [ Jonathan Yu ]
-  No release necessary
-  IGNORE-VERSION: 2.2002-1
-
   * New upstream release
-    + Fix INSTALLDIRS setting for older Perls (RT#47895)
     + Fix XSUsage prototypes -- xsusage_{five,six} take an int parameter
 
   [ Damyan Ivanov ]
