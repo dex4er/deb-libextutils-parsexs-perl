@@ -1,3 +1,9 @@
+libextutils-parsexs-perl (2.2002-2) UNRELEASED; urgency=low
+
+  * Update jawnsy's email address
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Tue, 01 Sep 2009 21:18:49 -0700
+
 libextutils-parsexs-perl (2.2002-1) unstable; urgency=low
 
   [ Jonathan Yu ]

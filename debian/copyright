@@ -18,7 +18,7 @@ Files: debian/*
 Copyright: 2003, 2005, Chip Salzenberg <chip@debian.org>
  2006, Florian Ragwitz <rafl@debian.org>
  2008, AGOSTINI Yves <agostini@univ-metz.fr>
- 2009, Jonathan Yu <frequency@cpan.org>
+ 2009, Jonathan Yu <jawnsy@cpan.org>
 License: GPL-1+ | Artistic
  The Debian packaging is put under the same terms as the module itself.
 
