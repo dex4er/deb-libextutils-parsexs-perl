@@ -1,8 +1,15 @@
-libextutils-parsexs-perl (2.2002-2) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.200401-1) UNRELEASED; urgency=low
 
+  These are only changes affecting older versions of perl (~ 5.8.8 and less)
+  IGNORE-VERSION: 2.200401-1
+
+  [ Jonathan Yu ]
+  * New upstream release
+
+  [ Ryan Niebur ]
   * Update jawnsy's email address
 
- -- Ryan Niebur <ryanryan52@gmail.com>  Tue, 01 Sep 2009 21:18:49 -0700
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 20 Sep 2009 10:19:47 -0400
 
 libextutils-parsexs-perl (2.2002-1) unstable; urgency=low
 
