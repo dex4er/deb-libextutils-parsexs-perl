@@ -18,7 +18,7 @@ my(@XSStack);	# Stack of conditionals and INCLUDEs
 my($XSS_work_idx, $cpp_next_tmp);
 
 use vars qw($VERSION);
-$VERSION = '2.2002';
+$VERSION = '2.200401';
 
 use vars qw(%input_expr %output_expr $ProtoUsed @InitFileCode $FH $proto_re $Overload $errors $Fallback
 	    $cplusplus $hiertype $WantPrototypes $WantVersionChk $except $WantLineNumbers
@@ -555,7 +555,7 @@ EOF
       my $arg0 = ((defined($static) or $func_name eq 'new')
 		  ? "CLASS" : "THIS");
       unshift(@args, $arg0);
-      ($report_args = "$arg0, $report_args") =~ s/^\w+, $/$arg0/;
+#      ($report_args = "$arg0, $report_args") =~ s/^\w+, $/$arg0/;
     }
     my $extra_args = 0;
     @args_num = ();
@@ -976,10 +976,19 @@ EOF
 ##endif
 EOF
 
+  #Under 5.8.x and lower, newXS is declared in proto.h as expecting a non-const
+  #file name argument. If the wrong qualifier is used, it causes breakage with
+  #C++ compilers and warnings with recent gcc.
+  my $file_decl = ($] < 5.009) ? "char file[]" : "const char* file";
+
   #-Wall: if there is no $Full_func_name there are no xsubs in this .xs
   #so `file' is unused
   print Q(<<"EOF") if $Full_func_name;
+##if (PERL_REVISION == 5 && PERL_VERSION < 9)
+#    char file[] = __FILE__;
+##else
 #    const char* file = __FILE__;
+##endif
 EOF
 
   print Q("#\n");
@@ -1026,12 +1035,12 @@ EOF
     print "\n    /* End of Initialisation Section */\n\n" ;
   }
 
-  if ($] >= 5.009) {
-    print <<'EOF';
-    if (PL_unitcheckav)
-         call_list(PL_scopestack_ix, PL_unitcheckav);
+  print Q(<<'EOF');
+##ifdef PL_unitcheckav
+#  if (PL_unitcheckav)
+#       call_list(PL_scopestack_ix, PL_unitcheckav);
+##endif
 EOF
-  }
 
   print Q(<<"EOF");
 #    XSRETURN_YES;
@@ -1160,7 +1169,7 @@ sub INPUT_handler {
       print "\tSTRLEN\tSTRLEN_length_of_$2;\n";
       $lengthof{$2} = $name;
       # $islengthof{$name} = $1;
-      $deferred .= "\n\tXSauto_length_of_$2 = STRLEN_length_of_$2;";
+      $deferred .= "\n\tXSauto_length_of_$2 = STRLEN_length_of_$2;\n";
     }
 
     # check for optional initialisation code
