@@ -1,4 +1,4 @@
-libextutils-parsexs-perl (2.200403-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.200403-1) unstable; urgency=low
 
   [ Jonathan Yu ]
   * New upstream release
@@ -6,7 +6,7 @@ libextutils-parsexs-perl (2.200403-1) UNRELEASED; urgency=low
   [ Ryan Niebur ]
   * Update jawnsy's email address
 
- -- Jonathan Yu <jawnsy@cpan.org>  Fri, 02 Oct 2009 09:25:37 -0400
+ -- Jonathan Yu <jawnsy@cpan.org>  Fri, 02 Oct 2009 09:28:35 -0400
 
 libextutils-parsexs-perl (2.2002-1) unstable; urgency=low
 
