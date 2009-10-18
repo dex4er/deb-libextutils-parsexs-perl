@@ -1,6 +1,10 @@
 libextutils-parsexs-perl (2.210000-1) unstable; urgency=low
 
+  [ Jonathan Yu ]
   * New upstream release
+
+  [ gregor herrmann ]
+  * debian/copyright: update upstream copyright.
 
  -- Jonathan Yu <jawnsy@cpan.org>  Sun, 18 Oct 2009 15:07:41 -0400
 

@@ -5,7 +5,7 @@ Upstream-Source: http://search.cpan.org/dist/ExtUtils-ParseXS/
 Upstream-Name: ExtUtils-ParseXS
 
 Files: *
-Copyright: Copyright 2002-2003 Ken Williams. All rights reserved. 
+Copyright: 2002-2009 Ken Williams, David Golden and other contributors
 License-Alias: Perl
 License: GPL-1+ | Artistic
  This library is free software; you can redistribute it and/or modify it under
