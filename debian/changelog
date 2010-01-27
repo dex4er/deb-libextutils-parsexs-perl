@@ -1,9 +1,9 @@
-libextutils-parsexs-perl (2.220100-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.220100-1) unstable; urgency=low
 
   * New upstream release
   * Update copyright to new DEP5 format
 
- -- Jonathan Yu <jawnsy@cpan.org>  Tue, 26 Jan 2010 21:23:24 -0500
+ -- Jonathan Yu <jawnsy@cpan.org>  Tue, 26 Jan 2010 21:28:55 -0500
 
 libextutils-parsexs-perl (2.220000-1) unstable; urgency=low
 
