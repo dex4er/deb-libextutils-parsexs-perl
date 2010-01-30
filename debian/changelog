@@ -1,8 +1,9 @@
-libextutils-parsexs-perl (2.220200-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (2.220200-1) unstable; urgency=low
 
   * New upstream release
+  * Standards-Version 3.8.4 (no changes)
 
- -- Jonathan Yu <jawnsy@cpan.org>  Fri, 29 Jan 2010 20:40:21 -0500
+ -- Jonathan Yu <jawnsy@cpan.org>  Fri, 29 Jan 2010 21:35:03 -0500
 
 libextutils-parsexs-perl (2.220100-1) unstable; urgency=low
 
