@@ -6,7 +6,7 @@ Build-Depends-Indep: perl, libextutils-cbuilder-perl
 Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
 Uploaders: AGOSTINI Yves <agostini@univ-metz.fr>,
  Jonathan Yu <jawnsy@cpan.org>, Damyan Ivanov <dmn@debian.org>,
- Ansgar Burchardt <ansgar@43-1.org>
+ Ansgar Burchardt <ansgar@debian.org>
 Standards-Version: 3.9.0
 Homepage: http://search.cpan.org/dist/ExtUtils-ParseXS/
 Vcs-Svn: svn://svn.debian.org/pkg-perl/trunk/libextutils-parsexs-perl/
