@@ -1,6 +1,7 @@
 libextutils-parsexs-perl (2.220600-2) UNRELEASED; urgency=low
 
   * Update my email address.
+  * debian/control: Convert Vcs-* fields to Git.
 
  -- Ansgar Burchardt <ansgar@debian.org>  Mon, 01 Nov 2010 11:16:45 +0100
 

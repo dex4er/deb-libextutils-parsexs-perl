@@ -9,8 +9,8 @@ Uploaders: AGOSTINI Yves <agostini@univ-metz.fr>,
  Ansgar Burchardt <ansgar@debian.org>
 Standards-Version: 3.9.0
 Homepage: http://search.cpan.org/dist/ExtUtils-ParseXS/
-Vcs-Svn: svn://svn.debian.org/pkg-perl/trunk/libextutils-parsexs-perl/
-Vcs-Browser: http://svn.debian.org/viewsvn/pkg-perl/trunk/libextutils-parsexs-perl/
+Vcs-Git: git://git.debian.org/pkg-perl/packages/libextutils-parsexs-perl.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libextutils-parsexs-perl.git
 
 Package: libextutils-parsexs-perl
 Architecture: all
