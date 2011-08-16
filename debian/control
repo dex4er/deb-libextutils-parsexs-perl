@@ -22,5 +22,4 @@ Description: utility to process Perl XS code into C code
  Perl access those functions.
  .
  This module is already included as part of Perl's core distribution, so this  
- package is only beneficial when newer features or bug fixes are required.       
-
+ package is only beneficial when newer features or bug fixes are required.
