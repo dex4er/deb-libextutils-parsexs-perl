@@ -1,4 +1,20 @@
-libextutils-parsexs-perl (3.030000-1) unstable; urgency=low
+libextutils-parsexs-perl (3.030000-1) UNRELEASED; urgency=low
+
+  TODO:
+  - d/changelog: merge 2.220600-2 entries into 3.030000-1 stanza
+  - d/copyright:
+    + add "version 1 of" to the GPL stanza
+    + s|GNU/Linux/|g
+    + bump copyright years also for Ken Williams
+    + add info about files which have Steffen Mueller as the copyright holder
+    + Steffen Mueller also seems to be the "Maintainer:" now
+  - and the real problem: this package now installs /usr/bin/xsubpp and
+    /usr/share/man/man1/xsubpp.1.gz which are also in the perl package ...
+    cf. also some bugs like #636762 ... but 5.14 has on older version, so we
+    might still upload this package but this needs coordination with the perl
+    maintainers so they can adjust their Replaces/Breaks (which I don't see at
+    the moment but still ...). or maybe this only affects 5.12? /me =
+    confused.
 
   * Team upload.
   * New upstream release.
