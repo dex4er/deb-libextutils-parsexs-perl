@@ -4,7 +4,7 @@ Source: http://search.cpan.org/dist/ExtUtils-ParseXS/
 Name: ExtUtils-ParseXS
 
 Files: *
-Copyright: 2002-2009, David Golden <dagolden@cpan.org>
+Copyright: 2002-2011, David Golden <dagolden@cpan.org>
  2002-2009, Ken Williams <ken@mathforum.org>
 License: Artistic or GPL-1+
 
