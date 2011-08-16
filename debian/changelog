@@ -1,30 +1,17 @@
 libextutils-parsexs-perl (3.030000-1) UNRELEASED; urgency=low
 
-  TODO:
-  - d/changelog: merge 2.220600-2 entries into 3.030000-1 stanza
-  - d/copyright:
-    + add "version 1 of" to the GPL stanza
-    + s|GNU/Linux/|g
-    + bump copyright years also for Ken Williams
-    + add info about files which have Steffen Mueller as the copyright holder
-    + Steffen Mueller also seems to be the "Maintainer:" now
-  - and the real problem: this package now installs /usr/bin/xsubpp and
-    /usr/share/man/man1/xsubpp.1.gz which are also in the perl package.
-    dpkg-divert should be used in the preinst and postrm of this package.
-    See libdevel-dprof-perl for an example, but note that the situation
-    isn't exactly the same because in this case the exact same man
-    page is involved.
-
   * Team upload.
   * New upstream release.
   * Bump debhelper and compat to 8, s-v to 3.9.2 (without changes.)
   * Bump upstream copyright year to current.
   * Add GPL version number to symlink.
   * Remove trailing newlines in d/control.
-
- -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 16 Aug 2011 12:40:35 -0400
-
-libextutils-parsexs-perl (2.220600-2) UNRELEASED; urgency=low
+  * Remove GNU/Linux from copyright file.
+  * Bump upstream version, the other author this time.
+  * If you use a versioned symlink, specify a version in the text as
+    well.
+  * Minor formatting changes in d/copyright.
+  * Updated d/copyright to reflect new upstream maintainers and authors.
 
   [ Ansgar Burchardt ]
   * Update my email address.
@@ -34,7 +21,9 @@ libextutils-parsexs-perl (2.220600-2) UNRELEASED; urgency=low
   * debian/copyright: Replace DEP5 Format-Specification URL from
     svn.debian.org to anonscm.debian.org URL.
 
- -- Ansgar Burchardt <ansgar@debian.org>  Mon, 01 Nov 2010 11:16:45 +0100
+  [ Harlan Lieberman-Berg ]
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 16 Aug 2011 18:56:50 -0400
 
 libextutils-parsexs-perl (2.220600-1) unstable; urgency=low
 
