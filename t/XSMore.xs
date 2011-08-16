@@ -2,11 +2,33 @@
 #include "perl.h"
 #include "XSUB.h"
 
+typedef IV MyType;
+typedef IV MyType2;
+typedef IV MyType3;
+typedef IV MyType4;
+
+
 =for testing
 
 This parts are ignored.
 
 =cut
+
+/* Old perls (pre 5.8.9 or so) did not have PERL_UNUSED_ARG in XSUB.h.
+ * This is normally covered by ppport.h. */
+#ifndef PERL_UNUSED_ARG
+#  if defined(lint) && defined(S_SPLINT_S) /* www.splint.org */
+#    include <note.h>
+#    define PERL_UNUSED_ARG(x) NOTE(ARGUNUSED(x))
+#  else
+#    define PERL_UNUSED_ARG(x) ((void)x)
+#  endif
+#endif
+#ifndef PERL_UNUSED_VAR
+#  define PERL_UNUSED_VAR(x) ((void)x)
+#endif
+
+
 
 STATIC void
 outlist(int* a, int* b){
@@ -16,6 +38,7 @@ outlist(int* a, int* b){
 
 STATIC int
 len(const char* const s, int const l){
+	PERL_UNUSED_ARG(s);
 	return l;
 }
 
@@ -40,6 +63,53 @@ FALLBACK: TRUE
 BOOT:
 	sv_setiv(get_sv("XSMore::boot_ok", TRUE), 100);
 
+
+TYPEMAP: <<END
+MyType	T_IV
+END
+
+TYPEMAP: <<"  FOO BAR BAZ";
+MyType2	T_FOOOO
+
+OUTPUT
+T_FOOOO
+	sv_setiv($arg, (IV)$var);
+  FOO BAR BAZ
+
+TYPEMAP: <<'END'
+MyType3	T_BAAR
+MyType4	T_BAAR
+
+OUTPUT
+T_BAAR
+	sv_setiv($arg, (IV)$var);
+
+INPUT
+T_BAAR
+	$var = ($type)SvIV($arg)
+END
+
+
+MyType
+typemaptest1()
+  CODE:
+    RETVAL = 42;
+  OUTPUT:
+    RETVAL
+
+MyType2
+typemaptest2()
+  CODE:
+    RETVAL = 42;
+  OUTPUT:
+    RETVAL
+
+MyType3
+typemaptest3(MyType4 foo)
+  CODE:
+    RETVAL = foo;
+  OUTPUT:
+    RETVAL
 
 void
 prototype_ssa()
@@ -84,6 +154,7 @@ int
 myabs(...)
 OVERLOAD: abs
 CODE:
+	PERL_UNUSED_VAR(items);
 	RETVAL = 42;
 OUTPUT:
 	RETVAL

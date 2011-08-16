@@ -1,5 +1,69 @@
 Revision history for Perl extension ExtUtils::ParseXS.
 
+3.03 - Thu Aug 11 08:24:00 CET 2011
+
+  - Test fix: Try all @INC-derived typemap locations. (CPAN RT #70047)
+    [Mike Sheldrake]
+
+3.02 - Thu Aug  4 18:19:00 CET 2011
+
+  - Test fix: Use File::Spec->catfile instead of catdir where appropriate.
+
+3.01 - Thu Aug  4 17:51:00 CET 2011
+
+  - No significant changes form 3.00_05.
+
+3.00_05 - Wed Jul 27 22:54:00 CET 2011
+
+  - Define PERL_UNUSED_ARG for pre-3.8.9 perls.
+    This should fix the tests on those perls.
+
+3.00_04 - Wed Jul 27 22:22:00 CET 2011
+
+  - Require perl 5.8.1.
+
+  - Patches from CPAN RT #53938, #61908
+    Both of these are attempts to fix win32 problems:
+    Bug #61908 for ExtUtils-ParseXS: MSWin compilers and back-slashed paths
+    Bug #53938 for ExtUtils-ParseXS: MinGW Broken after 2.21
+
+3.00_03 - Fri Jul 22 20:13:00 CET 2011
+
+  - Add some diagnostics when xsubpp fails to load a current-enough
+    version of ExtUtils::ParseXS. [Steffen Mueller]
+
+  - Add a check to Makefile.PL that scans @INC to determine whether
+    the new xsubpp will be shadowed by another, existing xsubpp
+    and warn the user vehemently. [Steffen Mueller]
+
+3.00_02 - Thu Jul 14 18:00:00 CET 2011
+
+  - Move script/xsubpp back to lib/ExtUtils/xsubpp
+    The original move caused old xsubpp's to be used.
+
+3.00_01 - Tue Jul 12 22:00:00 CET 2011
+
+  - Major refactoring of the whole code base.
+    It finally runs under 'use strict' for the first time!
+    [James Keenan, Steffen Mueller]
+
+  - Typemaps can now be embedded into XS code using a here-doc
+    like syntax and the new "TYPEMAP:" XS keyword.
+    [Steffen Mueller]
+
+  - Move typemap handling code to ExtUtils::Typemaps
+    with full object-oriented goodness. [Steffen Mueller]
+
+  - Check API compatibility when loading xs modules.
+    If on a new-enough perl, add the XS_APIVERSION_BOOTCHECK macro to
+    the _boot function of every XS module to compare it against the API
+    version the module has been compiled against. If the versions do
+    not match, an exception is thrown. [Florian Ragwitz]
+
+  - Fixed compiler warnings in XS. [Zefram]
+
+  - Spell-check [Peter J. Acklam]
+
 2.2206 - Sun Jul  4 15:43:21 EDT 2010
 
  Bug fixes:
@@ -230,7 +294,7 @@ Revision history for Perl extension ExtUtils::ParseXS.
 
  - On Win32, there was a DLL file we create during testing that we
    couldn't delete unless we closed it first, so testing failed when
-   the deletiong was attempted.  This should now work (provided the
+   the deletion was attempted.  This should now work (provided the
    version of perl is high enough to have DynaLoader::dl_unload_file()
    - I'm not sure what will happen otherwise). [Steve Hay]
 
