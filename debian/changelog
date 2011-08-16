@@ -1,3 +1,14 @@
+libextutils-parsexs-perl (3.030000-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Bump debhelper and compat to 8, s-v to 3.9.2 (without changes.)
+  * Bump upstream copyright year to current.
+  * Add GPL version number to symlink.
+  * Remove trailing newlines in d/control.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 16 Aug 2011 12:40:35 -0400
+
 libextutils-parsexs-perl (2.220600-2) UNRELEASED; urgency=low
 
   [ Ansgar Burchardt ]
