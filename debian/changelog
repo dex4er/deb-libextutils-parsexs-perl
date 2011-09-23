@@ -1,4 +1,4 @@
-libextutils-parsexs-perl (3.030000-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (3.040000-1) UNRELEASED; urgency=low
 
   TODO:
   - and the real problem: this package now installs /usr/bin/xsubpp and
