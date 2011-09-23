@@ -1,5 +1,13 @@
 libextutils-parsexs-perl (3.030000-1) UNRELEASED; urgency=low
 
+  TODO:
+  - and the real problem: this package now installs /usr/bin/xsubpp and
+    /usr/share/man/man1/xsubpp.1.gz which are also in the perl package.
+    dpkg-divert should be used in the preinst and postrm of this package.
+    See libdevel-dprof-perl for an example, but note that the situation
+    isn't exactly the same because in this case the exact same man
+    page is involved.
+
   * Team upload.
   * New upstream release.
   * Bump debhelper and compat to 8, s-v to 3.9.2 (without changes.)
