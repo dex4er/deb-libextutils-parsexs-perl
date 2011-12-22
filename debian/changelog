@@ -1,6 +1,4 @@
-libextutils-parsexs-perl (3.080000-1) UNRELEASED; urgency=low
-
-  * Team upload.
+libextutils-parsexs-perl (3.080000-1) unstable; urgency=low
 
   [ Ansgar Burchardt ]
   * Email change: Ansgar Burchardt -> ansgar@debian.org
@@ -25,8 +23,11 @@ libextutils-parsexs-perl (3.080000-1) UNRELEASED; urgency=low
 
   [ gregor herrmann ]
   * New upstream release 3.080000.
+  * Add debian/{preinst,postrm} with diversions for /usr/bin/xsubpp and
+    /usr/share/man/man1/xsubpp.1.gz (also shipped in the perl package).
+  * Add /me to Uploaders.
 
- -- gregor herrmann <gregoa@debian.org>  Thu, 22 Dec 2011 17:53:05 +0100
+ -- gregor herrmann <gregoa@debian.org>  Thu, 22 Dec 2011 18:11:00 +0100
 
 libextutils-parsexs-perl (2.220600-1) unstable; urgency=low
 
