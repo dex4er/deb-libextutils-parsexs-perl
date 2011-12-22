@@ -9,6 +9,16 @@ libextutils-parsexs-perl (3.040000-1) UNRELEASED; urgency=low
     page is involved.
 
   * Team upload.
+
+  [ Ansgar Burchardt ]
+  * Email change: Ansgar Burchardt -> ansgar@debian.org
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ Harlan Lieberman-Berg ]
   * New upstream release.
   * Bump debhelper and compat to 8, s-v to 3.9.2 (without changes.)
   * Bump upstream copyright year to current.
@@ -20,16 +30,6 @@ libextutils-parsexs-perl (3.040000-1) UNRELEASED; urgency=low
     well.
   * Minor formatting changes in d/copyright.
   * Updated d/copyright to reflect new upstream maintainers and authors.
-
-  [ Ansgar Burchardt ]
-  * Update my email address.
-  * debian/control: Convert Vcs-* fields to Git.
-
-  [ Salvatore Bonaccorso ]
-  * debian/copyright: Replace DEP5 Format-Specification URL from
-    svn.debian.org to anonscm.debian.org URL.
-
-  [ Harlan Lieberman-Berg ]
 
  -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 16 Aug 2011 18:56:50 -0400
 
