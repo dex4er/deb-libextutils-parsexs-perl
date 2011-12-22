@@ -1,4 +1,4 @@
-libextutils-parsexs-perl (3.040000-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (3.080000-1) UNRELEASED; urgency=low
 
   TODO:
   - and the real problem: this package now installs /usr/bin/xsubpp and
@@ -19,7 +19,7 @@ libextutils-parsexs-perl (3.040000-1) UNRELEASED; urgency=low
     svn.debian.org to anonscm.debian.org URL.
 
   [ Harlan Lieberman-Berg ]
-  * New upstream release.
+  * New upstream release 3.040000.
   * Bump debhelper and compat to 8, s-v to 3.9.2 (without changes.)
   * Bump upstream copyright year to current.
   * Add GPL version number to symlink.
@@ -31,7 +31,10 @@ libextutils-parsexs-perl (3.040000-1) UNRELEASED; urgency=low
   * Minor formatting changes in d/copyright.
   * Updated d/copyright to reflect new upstream maintainers and authors.
 
- -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 16 Aug 2011 18:56:50 -0400
+  [ gregor herrmann ]
+  * New upstream release 3.080000.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 22 Dec 2011 17:53:05 +0100
 
 libextutils-parsexs-perl (2.220600-1) unstable; urgency=low
 
