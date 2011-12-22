@@ -1,5 +1,64 @@
 Revision history for Perl extension ExtUtils::ParseXS.
 
+3.08 - Mon Dec 19 18:03:00 CET 2011
+  - Silence undefined-value-in-addition warning
+    (Nothing serious, just happened sometimes when reporting line numbers for
+    errors. But warning during build process.)
+
+3.07 - Wed Dec  7 14:10:00 CET 2011
+  - Fix inconsistent versioning in 3.06.
+
+3.06 - Fri Dec  2 08:10:00 CET 2011
+
+  - Fix Cygwin issues [Tony Cook]
+    avoid conflicting static / dllexport on legacy perls too
+    This probably fixes rt.cpan.org 72313 and 71964.
+    (3928a66ad4bd8aee704eda1942b7877c0ff1ab2c in core)
+
+  - Convert ` to ' [James Keenan]
+    55bee391aeff3c3b8d22fa4ce5491ee9440028aa and
+    6dfee1ec62c64d7afe8ced4650596dd9e7f71a63 in core
+
+  - Avoid some test-time warnings [Zefram]
+    97bae9c59cd181b3b54061213ec1fdce0ccb30d4 in core
+
+3.05 - Wed Oct  5 08:14:00 CET 2011
+
+  - No functional changes, promoted to stable release.
+
+3.04_04 - Mon Sep 12 08:12:00 CET 2011
+
+  - Simplify generated XS code by emitting a compatibility version
+    of dVAR. [Nicholas Clark]
+
+  - Fixed "INCLUDE: $cmd |", CPAN RT #70213
+
+3.04_03 - Sun Sep  4 18:49:00 CET 2011
+
+  - By #defining PERL_EUPXS_ALWAYS_EXPORT or
+    PERL_EUPXS_NEVER_EXPORT early in your XS code, you can
+    force ExtUtils::ParseXS to always or never export
+    XSUB symbols. This has no effect on boot_* symbols since
+    those must be exported.
+
+3.04_02 - Sat Sep  3 15:28:00 CET 2011
+
+  - Don't put null characters into the generated source
+    file when -except is used; write the '\0' escape sequence
+    properly instead. [Stephen Bennett]
+
+3.04_01 - Sun Aug 28 17:50:00 CET 2011
+
+  - The XSUB.h changes to make XS(name) use XS_INTERNAL(name)
+    by default (which were in the 5.15.2 dev release of perl)
+    have been reverted since too many CPAN modules expect to
+    be able to refer to XSUBs declared with XS(name).
+    Instead, ExtUtils::ParseXS will define a copy of the
+    XS_INTERNAL/XS_EXTERNAL macros as necessary going back to
+    perl 5.10.0 (which is the oldest perl I had for testing).
+    By default, ExtUtils::ParseXS will use XS_INTERNAL(name)
+    instead of XS(name).
+
 3.04 - Thu Aug 25 08:20:00 CET 2011
 
   - Stable release based on 3.03_03, no functional changes.
