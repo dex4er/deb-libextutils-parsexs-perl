@@ -11,11 +11,12 @@ Copyright: 2002-2011, David Golden <dagolden@cpan.org>
 License: Artistic or GPL-1+
 
 Files: debian/*
-Copyright: 2009-2010, Jonathan Yu <jawnsy@cpan.org>
- 2009, Damyan Ivanov <dmn@debian.org>
- 2008, AGOSTINI Yves <agostini@univ-metz.fr>
+Copyright: 2003-2005, Chip Salzenberg <chip@debian.org>
  2006, Florian Ragwitz <rafl@debian.org>
- 2003-2005, Chip Salzenberg <chip@debian.org>
+ 2008, AGOSTINI Yves <agostini@univ-metz.fr>
+ 2009, Damyan Ivanov <dmn@debian.org>
+ 2009-2010, Jonathan Yu <jawnsy@cpan.org>
+ 2011, gregor herrmann <gregoa@debian.org>
 License: Artistic or GPL-1+
 
 License: Artistic
