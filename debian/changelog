@@ -1,8 +1,8 @@
-libextutils-parsexs-perl (3.110000-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (3.110000-1) unstable; urgency=low
 
   * New upstream release.
 
- -- gregor herrmann <gregoa@debian.org>  Sat, 31 Dec 2011 01:14:27 +0100
+ -- gregor herrmann <gregoa@debian.org>  Sat, 31 Dec 2011 01:15:19 +0100
 
 libextutils-parsexs-perl (3.080000-1) unstable; urgency=low
 
