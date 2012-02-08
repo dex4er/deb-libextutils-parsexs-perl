@@ -4,10 +4,18 @@ Source: http://search.cpan.org/dist/ExtUtils-ParseXS/
 Name: ExtUtils-ParseXS
 
 Files: *
-Copyright: 2002-2011, David Golden <dagolden@cpan.org>
- 2002-2011, Ken Williams <ken@mathforum.org>
- 2011, Steffen Müller <smueller@cpan.org>
- 2011, James Keenan <jkeenan@cpan.org>
+Copyright: 2002-2012, David Golden <dagolden@cpan.org>
+ 2002-2012, Ken Williams <ken@mathforum.org>
+ 2002-2012, Steffen Müller <smueller@cpan.org>
+ 2002-2012, James Keenan <jkeenan@cpan.org>
+License: Artistic or GPL-1+
+
+Files: lib/ExtUtils/Typemaps/OutputMap.pm lib/ExtUtils/Typemaps/InputMap.pm
+ lib/ExtUtils/Typemaps/Type.pm lib/ExtUtils/Typemaps.pm
+Copyright: 2009, 2010, 2011, 2012, Steffen Mueller
+
+Files: lib/ExtUtils/Typemaps/Cmd.pm
+Copyright: 2012, Steffen Mueller
 License: Artistic or GPL-1+
 
 Files: debian/*
@@ -17,7 +25,7 @@ Copyright: 2003-2005, Chip Salzenberg <chip@debian.org>
  2009, Damyan Ivanov <dmn@debian.org>
  2009-2010, Jonathan Yu <jawnsy@cpan.org>
  2010, Ansgar Burchardt <ansgar@debian.org>
- 2011, gregor herrmann <gregoa@debian.org>
+ 2011-2012, gregor herrmann <gregoa@debian.org>
 License: Artistic or GPL-1+
 
 License: Artistic
