@@ -1,6 +1,6 @@
 Format-Specification: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?view=markup&pathrev=135
 Maintainer: Steffen Müller <smueller@cpan.org>
-Source: http://search.cpan.org/dist/ExtUtils-ParseXS/
+Source: https://metacpan.org/release/ExtUtils-ParseXS/
 Name: ExtUtils-ParseXS
 
 Files: *

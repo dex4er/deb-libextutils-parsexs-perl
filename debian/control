@@ -12,7 +12,7 @@ Build-Depends-Indep: perl
 Standards-Version: 3.9.2
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libextutils-parsexs-perl.git
 Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libextutils-parsexs-perl.git
-Homepage: http://search.cpan.org/dist/ExtUtils-ParseXS/
+Homepage: https://metacpan.org/release/ExtUtils-ParseXS/
 
 Package: libextutils-parsexs-perl
 Architecture: all
