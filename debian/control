@@ -9,7 +9,7 @@ Section: perl
 Priority: optional
 Build-Depends: debhelper (>= 8)
 Build-Depends-Indep: perl
-Standards-Version: 3.9.2
+Standards-Version: 3.9.4
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libextutils-parsexs-perl.git
 Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libextutils-parsexs-perl.git
 Homepage: https://metacpan.org/release/ExtUtils-ParseXS/
