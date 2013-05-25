@@ -4,10 +4,10 @@ Upstream-Contact: Steffen Müller <smueller@cpan.org>
 Source: https://metacpan.org/release/ExtUtils-ParseXS/
 
 Files: *
-Copyright: 2002-2012, David Golden <dagolden@cpan.org>
- 2002-2012, Ken Williams <ken@mathforum.org>
- 2002-2012, Steffen Müller <smueller@cpan.org>
- 2002-2012, James Keenan <jkeenan@cpan.org>
+Copyright: 2002-2013, David Golden <dagolden@cpan.org>
+ 2002-2013, Ken Williams <ken@mathforum.org>
+ 2002-2013, Steffen Müller <smueller@cpan.org>
+ 2002-2013, James Keenan <jkeenan@cpan.org>
 License: Artistic or GPL-1+
 
 Files: lib/ExtUtils/Typemaps.pm 
@@ -15,7 +15,7 @@ Files: lib/ExtUtils/Typemaps.pm
  lib/ExtUtils/Typemaps/InputMap.pm
  lib/ExtUtils/Typemaps/OutputMap.pm
  lib/ExtUtils/Typemaps/Type.pm
-Copyright: 2009, 2010, 2011, 2012, Steffen Mueller
+Copyright: 2009, 2010, 2011, 2012, 2013 Steffen Mueller
 License: Artistic or GPL-1+
 
 Files: debian/*
