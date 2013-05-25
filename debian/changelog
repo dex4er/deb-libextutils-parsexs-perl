@@ -1,4 +1,4 @@
-libextutils-parsexs-perl (3.180000-1) UNRELEASED; urgency=low
+libextutils-parsexs-perl (3.180000-1) unstable; urgency=low
 
   [ gregor herrmann ]
   * debian/control: update {versioned,alternative} (build) dependencies.
@@ -9,8 +9,11 @@ libextutils-parsexs-perl (3.180000-1) UNRELEASED; urgency=low
 
   [ Florian Schlichting ]
   * Imported Upstream version 3.180000
+  * Bumped Standards-Version to 3.9.4 (update to copyright-format 1.0)
+  * Merged copyright paragraphs for Steffen Mueller
+  * Added myself to uploaders and copyright
 
- -- Florian Schlichting <fsfs@debian.org>  Sat, 25 May 2013 22:53:04 +0200
+ -- Florian Schlichting <fsfs@debian.org>  Sat, 25 May 2013 23:04:19 +0200
 
 libextutils-parsexs-perl (3.150000-1) unstable; urgency=low
 
