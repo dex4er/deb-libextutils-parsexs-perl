@@ -1,4 +1,4 @@
-libextutils-parsexs-perl (3.150000-2) UNRELEASED; urgency=low
+libextutils-parsexs-perl (3.180000-1) UNRELEASED; urgency=low
 
   [ gregor herrmann ]
   * debian/control: update {versioned,alternative} (build) dependencies.
@@ -7,7 +7,10 @@ libextutils-parsexs-perl (3.150000-2) UNRELEASED; urgency=low
   * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
   * Change search.cpan.org based URIs to metacpan.org based URIs
 
- -- gregor herrmann <gregoa@debian.org>  Thu, 05 Jul 2012 12:29:10 -0600
+  [ Florian Schlichting ]
+  * Imported Upstream version 3.180000
+
+ -- Florian Schlichting <fsfs@debian.org>  Sat, 25 May 2013 22:53:04 +0200
 
 libextutils-parsexs-perl (3.150000-1) unstable; urgency=low
 
