@@ -10,13 +10,12 @@ Copyright: 2002-2012, David Golden <dagolden@cpan.org>
  2002-2012, James Keenan <jkeenan@cpan.org>
 License: Artistic or GPL-1+
 
-Files: lib/ExtUtils/Typemaps/OutputMap.pm lib/ExtUtils/Typemaps/InputMap.pm
- lib/ExtUtils/Typemaps/Type.pm lib/ExtUtils/Typemaps.pm
+Files: lib/ExtUtils/Typemaps.pm 
+ lib/ExtUtils/Typemaps/Cmd.pm
+ lib/ExtUtils/Typemaps/InputMap.pm
+ lib/ExtUtils/Typemaps/OutputMap.pm
+ lib/ExtUtils/Typemaps/Type.pm
 Copyright: 2009, 2010, 2011, 2012, Steffen Mueller
-License: Artistic or GPL-1+
-
-Files: lib/ExtUtils/Typemaps/Cmd.pm
-Copyright: 2012, Steffen Mueller
 License: Artistic or GPL-1+
 
 Files: debian/*
