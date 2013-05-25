@@ -4,7 +4,8 @@ Uploaders: AGOSTINI Yves <agostini@univ-metz.fr>,
            Jonathan Yu <jawnsy@cpan.org>,
            Damyan Ivanov <dmn@debian.org>,
            Ansgar Burchardt <ansgar@debian.org>,
-           gregor herrmann <gregoa@debian.org>
+           gregor herrmann <gregoa@debian.org>,
+           Florian Schlichting <fsfs@debian.org>
 Section: perl
 Priority: optional
 Build-Depends: debhelper (>= 8)
