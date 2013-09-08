@@ -1,3 +1,12 @@
+libextutils-parsexs-perl (3.220000-1) UNRELEASED; urgency=low
+
+  IGNORE-VERSION: 3.220000-1
+  # no code changes
+
+  * Import Upstream version 3.220000
+
+ -- Florian Schlichting <fsfs@debian.org>  Sun, 08 Sep 2013 23:37:27 +0200
+
 libextutils-parsexs-perl (3.210000-1) unstable; urgency=low
 
   * Imported Upstream version 3.210000.
