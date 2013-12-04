@@ -1,3 +1,9 @@
+libextutils-parsexs-perl (3.210000-1~ppa1precise1) precise; urgency=low
+
+  * Ubuntu precise backport.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Wed, 04 Dec 2013 23:12:16 +0100
+
 libextutils-parsexs-perl (3.210000-1) unstable; urgency=low
 
   * Imported Upstream version 3.210000.
